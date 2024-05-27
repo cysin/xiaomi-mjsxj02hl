@@ -1,0 +1,86 @@
+system:
+  webPort: 80
+  httpsPort: 443
+  logLevel: debug
+  buffer: 1024
+  plugins: true
+  webAdmin: disabled
+  staticDir: /var/www/majestic
+isp:
+  antiFlicker: disabled
+  iqProfile: /etc/sensors/iq/f23.ini
+image:
+  mirror: true
+  flip: true
+  rotate: 0
+  contrast: 50
+  hue: 50
+  saturation: 50
+  luminance: 50
+video0:
+  enabled: true
+  codec: h264
+  fps: 25
+  bitrate: 4096
+  rcMode: vbr
+  gopSize: 1.0
+video1:
+  enabled: false
+  codec: h264
+  size: 704x576
+  fps: 15
+jpeg:
+  enabled: true
+  qfactor: 70
+  fps: 5
+osd:
+  enabled: true
+  font: "/usr/share/fonts/truetype/UbuntuMono-Regular.ttf"
+  template: "%Y-%m-%d %H:%M:%S"
+  posX: 16
+  posY: 16
+audio:
+  enabled: true
+  volume: 30
+  srate: 8000
+  codec: opus
+  outputEnabled: false
+  outputVolume: 30
+  speakerPin: 55
+rtsp:
+  enabled: true
+  port: 554
+nightMode:
+  colorToGray: true
+  irCutSingleInvert: false
+  lightMonitor: false
+  lightSensorInvert: false
+  irCutPin1: 70
+  irCutPin2: 68
+  backlightPin: 54
+motionDetect:
+  enabled: false
+  visualize: false
+  debug: false
+records:
+  enabled: false
+  path: "/mnt/mmcblk0p1/%F/%H.mp4"
+  maxUsage: 95
+  rawVideo: true
+outgoing:
+  enabled: false
+watchdog:
+  enabled: true
+  timeout: 300
+hls:
+  enabled: false
+onvif:
+  enabled: false
+ipeye:
+  enabled: false
+youtube:
+  enabled: false
+netip:
+  enabled: false
+cloud:
+  enabled: false
